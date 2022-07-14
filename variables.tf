@@ -298,9 +298,9 @@ variable "network_public_subnets" {
 # TFE Instance(s)
 # ---------------
 variable "iam_role_policy_arns" {
-  default     = []
+  default     = {}
   description = "A set of Amazon Resource Names of IAM role policies to be attached to the TFE IAM role."
-  type        = set(string)
+  type        = map
 }
 
 variable "key_name" {
